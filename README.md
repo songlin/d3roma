@@ -57,8 +57,8 @@ pip install hydra-core --upgrade
 
 ## DOWNLOAD PRE-TRAINED WEIGHT
 
-+ For model variant: Cond. Left+Right+Raw [Google drive](https://drive.google.com/file/d/12BLB7mKDbLPhW2UuJSmYnwBFokOjDvC9/view?usp=sharing), [百度云](https://pan.baidu.com/s/1u7n4wstGpqwAswp8ZbTNlw?pwd=o9nk)
-+ For model variant: Cond. RGB+Raw [Google drive](https://drive.google.com/file/d/1cTAUZ2lXBXe4-peHLUneJ6ufQTqFr6E9/view?usp=drive_link), [百度云](https://pan.baidu.com/s/1zWwdMQ2_6-CViaC2JUGsFA?pwd=bwwb)
++ For model variant: Cond. Left+Right+Raw [Huggingface](https://huggingface.co/songlinwei/d3roma/blob/main/ldm_sf-mixed.ep199.tar.gz), [百度云](https://pan.baidu.com/s/1eqIx-PB9VEgBJkahkLlaEQ?pwd=wfga)
++ For model variant: Cond. RGB+Raw [HuggingFace](https://huggingface.co/songlinwei/d3roma/blob/main/ldm_sf-mixed.raw%2Brgb.ep56.tar.gz), [百度云](https://pan.baidu.com/s/1zWwdMQ2_6-CViaC2JUGsFA?pwd=bwwb)
 ```
 # Download pretrained weigths from Google Drive
 # Extract it under the project folder
@@ -88,7 +88,7 @@ All the datasets will be linked to folder `datasets`
 
 + Download [DREDS](https://github.com/PKU-EPIC/DREDS#dataset)
 
-+ Download [HISS](https://drive.google.com/drive/folders/1BTbiHWIM_zQC85pz-NMVnYBdZvt1oxaV?usp=sharing)
++ Download [HISS - The D3RoMA depth dataset](https://huggingface.co/datasets/songlinwei/HISS)
 
 + Download  [Clearpose](https://github.com/opipari/ClearPose)
 
@@ -177,7 +177,7 @@ python scripts/stereo_matching.py
 
 We also tried using [libSGM](https://github.com/fixstars/libSGM) to precompute disaprity maps for SceneFlow.
 The precomputed raw disparities are put under `raw_cleanpass` and `raw_finalpass` with same sub-folder paths.
-You can also download the [precomputed sceneflow raw disparities here](https://drive.google.com/file/d/1CZQvR-61IQ8o4n4ewNkVO9M3VCIIGHgr/view?usp=sharing).
+You can also download the [precomputed sceneflow raw disparities here](https://huggingface.co/songlinwei/d3roma/blob/main/sceneflow-rawdisp.tar.gz).
 
 - Sometimes the source stereo images are too challenging for computing raw disparities, so we filter them our during training.
 We run the following scripts to filter out very bad raw disparities and exclude them in dataloader:
